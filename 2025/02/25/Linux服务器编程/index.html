@@ -19,23 +19,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文章基于（一）TinyWebServer的环境配置与运行-CSDN博客与TinyWebserver【一】配置与运行-CSDN博客实现，仅用于个人总结与补充。 本文章更倾向于是对hexo博客功能的探索与复现过程的简单记录。  安装VMware与Ubuntu系统，创建虚拟机用于实验。  安装mysql等Ubuntu需要的程序。  克隆代码并编译运行。  main.cpp中只需要修改databasen">
+    <meta name="description" content="1. TCP&#x2F;IP协议族TCP&#x2F;IP协议族是四层协议系统，分为数据链路层、网络层、传输层、应用层。  数据链路层：使用ARP、RARP协议，向上层隐瞒不同物理网络不同的电气特性，实现IP地址与物理地址之间的相互转换。  网络层：使用ICMP、IP协议，向上层隐瞒网络拓扑结构，传输层认为主机之间是相互直连的，ICMP协议用于检测网络连接，使用同处于网络层的IP协议提供的功能。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TinyWebServer的复现">
-<meta property="og:url" content="http://example.com/2025/02/25/TinyWebServerNotes/index.html">
+<meta property="og:title" content="Linux服务器编程">
+<meta property="og:url" content="http://example.com/2025/02/25/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="本文章基于（一）TinyWebServer的环境配置与运行-CSDN博客与TinyWebserver【一】配置与运行-CSDN博客实现，仅用于个人总结与补充。 本文章更倾向于是对hexo博客功能的探索与复现过程的简单记录。  安装VMware与Ubuntu系统，创建虚拟机用于实验。  安装mysql等Ubuntu需要的程序。  克隆代码并编译运行。  main.cpp中只需要修改databasen">
+<meta property="og:description" content="1. TCP&#x2F;IP协议族TCP&#x2F;IP协议族是四层协议系统，分为数据链路层、网络层、传输层、应用层。  数据链路层：使用ARP、RARP协议，向上层隐瞒不同物理网络不同的电气特性，实现IP地址与物理地址之间的相互转换。  网络层：使用ICMP、IP协议，向上层隐瞒网络拓扑结构，传输层认为主机之间是相互直连的，ICMP协议用于检测网络连接，使用同处于网络层的IP协议提供的功能。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="d:\blog\myblog\source_posts\TinyWebServerNotes\image-20250225174127054.png">
-<meta property="article:published_time" content="2025-02-25T08:25:49.000Z">
-<meta property="article:modified_time" content="2025-02-25T09:56:46.488Z">
+<meta property="article:published_time" content="2025-02-25T10:48:44.000Z">
+<meta property="article:modified_time" content="2025-02-25T11:18:58.798Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="d:\blog\myblog\source_posts\TinyWebServerNotes\image-20250225174127054.png">
   
   
   
-  <title>TinyWebServer的复现 - Hexo</title>
+  <title>Linux服务器编程 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="TinyWebServer的复现"></span>
+            <span id="subtitle" data-typed-text="Linux服务器编程"></span>
           
         </div>
 
@@ -212,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-02-25 16:25" pubdate>
-          2025年2月25日 下午
+        <time datetime="2025-02-25 18:48" pubdate>
+          2025年2月25日 晚上
         </time>
       </span>
     
@@ -224,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          160 字
+          354 字
         
       </span>
     
@@ -235,7 +233,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -272,26 +270,27 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">TinyWebServer的复现</h1>
+            <h1 id="seo-header">Linux服务器编程</h1>
             
             
               <div class="markdown-body">
                 
-                <p>本文章基于<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46653651/article/details/133420059">（一）TinyWebServer的环境配置与运行-CSDN博客</a>与<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_47710003/article/details/144442735">TinyWebserver【一】配置与运行-CSDN博客</a>实现，仅用于个人总结与补充。</p>
-<p>本文章更倾向于是对hexo博客功能的探索与复现过程的简单记录。</p>
+                <h2 id="1-TCP-IP协议族"><a href="#1-TCP-IP协议族" class="headerlink" title="1. TCP&#x2F;IP协议族"></a>1. TCP&#x2F;IP协议族</h2><p>TCP&#x2F;IP协议族是四层协议系统，分为数据链路层、网络层、传输层、应用层。</p>
 <ol>
-<li><p>安装VMware与Ubuntu系统，创建虚拟机用于实验。</p>
+<li><p>数据链路层：使用ARP、RARP协议，向上层隐瞒不同物理网络不同的电气特性，实现IP地址与物理地址之间的相互转换。</p>
 </li>
-<li><p>安装mysql等Ubuntu需要的程序。</p>
+<li><p>网络层：使用ICMP、IP协议，向上层隐瞒网络拓扑结构，传输层认为主机之间是相互直连的，ICMP协议用于检测网络连接，使用同处于网络层的IP协议提供的功能。</p>
 </li>
-<li><p>克隆代码并编译运行。</p>
+<li><p>传输层：使用TCP、UDP、SCTP协议，为应用层提供一条端到端的逻辑通信链路。TCP协议提供可靠的、面向连接的、基于流的服务，使用超时重传、数据确认等方式保证数据包的正确发送。</p>
 <blockquote>
-<p>main.cpp中只需要修改databasename，因为克隆得到的文件夹本身权限即为root，若修改登录名与密码，则需通过chmod命令更改TinyWebServer文件夹的属性，使其可以被读写。</p>
+<p>TCP提供连接的状态、读写缓冲区、定时器等数据结构。</p>
 </blockquote>
 </li>
-<li><p>压力测试</p>
-<p><img src="D:\blog\myblog\source_posts\TinyWebServerNotes\image-20250225174127054.png" srcset="/img/loading.gif" lazyload alt="压力测试"></p>
-</li>
+</ol>
+<p>​	UDP提供无连接、不可靠、基于数据报的服务，不保证数据的正确传送。</p>
+<p>​	SCTP协议是一种较新的传输层协议，在此处不进行讨论。</p>
+<ol start="4">
+<li>应用层：使用telnet、OSPF、DNS等协议，在用户空间中实现，负责文件传输、名称查询、网络管理等。应用层协议既可以跳过传输层直接使用网络层提供的服务，又可以适配TCP协议和UDP协议。</li>
 </ol>
 
                 
@@ -310,8 +309,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>TinyWebServer的复现</div>
-      <div>http://example.com/2025/02/25/TinyWebServerNotes/</div>
+      <div>Linux服务器编程</div>
+      <div>http://example.com/2025/02/25/Linux服务器编程/</div>
     </div>
     <div class="license-meta">
       
@@ -355,18 +354,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/02/25/%E6%B7%B1%E5%85%A5TinyWebServer/" title="深入TinyWebServer">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">深入TinyWebServer</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/02/25/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2025/02/25/%E6%B7%B1%E5%85%A5TinyWebServer/" title="深入TinyWebServer">
+                        <span class="hidden-mobile">深入TinyWebServer</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
