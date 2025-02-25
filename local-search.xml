@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>TinyWebServerNotes</title>
+    <link href="/2025/02/25/TinyWebServerNotes/"/>
+    <url>/2025/02/25/TinyWebServerNotes/</url>
+    
+    <content type="html"><![CDATA[<h1 id="1-TinyWebServer的复现"><a href="#1-TinyWebServer的复现" class="headerlink" title="1. TinyWebServer的复现"></a>1. TinyWebServer的复现</h1><p>本环节基于<a href="https://blog.csdn.net/weixin_46653651/article/details/133420059">（一）TinyWebServer的环境配置与运行-CSDN博客</a>与<a href="https://blog.csdn.net/m0_47710003/article/details/144442735">TinyWebserver【一】配置与运行-CSDN博客</a>实现，仅用于个人总结与补充。</p><ol><li>安装VMware与Ubuntu系统，创建虚拟机用于实验。</li><li>安装mysql等Ubuntu需要的程序。</li><li>克隆代码并编译运行。</li></ol><ol start="4"><li><p>压力测试</p><p><img src="D:\blog\myblog\source_posts\TinyWebServerNotes\image-20250225174127054.png" alt="压力测试"></p></li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2025/02/25/hello-world/"/>
     <url>/2025/02/25/hello-world/</url>
